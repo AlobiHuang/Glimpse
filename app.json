@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Glimpse",
+    "slug": "glimpse",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-image",
+      "expo-sqlite",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Glimpse lets you add a photo from your camera roll to your map.",
+          "cameraPermission": "Glimpse uses the camera so you can capture a glimpse of a place."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Glimpse pins your glimpse to the place it shows, rounded to about 1 km unless you choose otherwise."
+        }
+      ],
+      "expo-font"
+    ],
+    "scheme": "glimpse",
+    "experiments": {
+      "typedRoutes": true
+    },
+    "backgroundColor": "#FFFFFF"
+  }
+}
